@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Student Alert System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Enhanced Student Alert System</h1>
+        <button id="themeToggle">Switch to Dark Mode</button>
+    </header>
+    <main>
+        <!-- Teacher Panel -->
+        <div class="card">
+            <h2>Teacher Panel</h2>
+            <input type="text" id="studentName" placeholder="Enter Student Name">
+            <textarea id="taskDescription" placeholder="Enter Task or Alert"></textarea>
+            <button id="sendAlert">Send Alert</button>
+        </div>
+
+        <!-- Student Panel -->
+        <div class="card">
+            <h2>Student Panel</h2>
+            <div id="alerts" class="alert-container">
+                <p>No alerts yet.</p>
+            </div>
+            <button id="clearAll" class="hidden">Clear All Alerts</button>
+        </div>
+    </main>
+    <footer>
+        <p>Enhanced Student Alert System &copy; 2024</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

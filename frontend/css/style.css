@@ -1,0 +1,174 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #007BFF;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#themeToggle {
+  background: white;
+  color: #007BFF;
+  border: 1px solid #007BFF;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+  background: #007BFF;
+  color: white;
+}
+
+/* Main Content */
+main {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #007BFF;
+}
+
+input, textarea, button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Alert Container */
+.alert-container {
+  margin-top: 1rem;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.alert-container div {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-left: 4px solid #007BFF;
+  border-radius: 8px;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.alert-container div:hover {
+  transform: scale(1.02);
+}
+
+.alert-container div button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #333;
+  color: white;
+}
+
+body.dark-mode .card {
+  background: #444;
+  color: white;
+}
+
+body.dark-mode footer {
+  background: #222;
+}
+
+body.dark-mode #themeToggle {
+  background: #444;
+  color: white;
+  border: 1px solid white;
+}
